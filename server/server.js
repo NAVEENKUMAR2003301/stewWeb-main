@@ -144,7 +144,7 @@ app.use("/api/admin", require("./routes/admin"));
 app.use("/api/contact", require("./routes/Contact"));
 
 // IMPORTANT
-app.use("/api/services", require("../server/routes/services"));
+app.use("/api/services", require("./routes/services"));
 
 // ---------- 404 ----------
 app.use((req, res) => {
