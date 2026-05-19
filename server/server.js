@@ -6,6 +6,8 @@ const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
 const cookieParser = require("cookie-parser");
 const cron = require("node-cron"); // ← for automatic monthly report
+
+const servicesRoutes = require("./routes/services");
 require("dotenv").config();
 
 const app = express();
@@ -33,7 +35,8 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/events", require("./routes/events"));
 app.use("/api/enquiries", require("./routes/enquiries"));
 app.use("/api/upload", require("./routes/upload"));
-app.use("/api/report", require("./routes/report"));
+// app.use("/api/report", require("./routes/report"));
+app.use("/api/services", servicesRoutes);
 app.use("/api/admin", require("./routes/admin"));
 app.use("/api/services", require("./routes/services"));
 app.use("/api/contact", require("./routes/Contact"));
