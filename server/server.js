@@ -184,22 +184,32 @@ app.use(helmet());
 // CORS
 // ======================================
 
-const allowedOrigins = [
-  "https://stew-web-main.vercel.app",
-  "http://localhost:5173",
-  "http://localhost:3000",
-];
+// const allowedOrigins = [
+//   "https://stew-web-main.vercel.app",
+//   "http://localhost:5173",
+//   "http://localhost:3000",
+// ];
+
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (!origin || allowedOrigins.includes(origin)) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//     credentials: true,
+//   }),
+// );
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: "https://stew-web-main.vercel.app", // your Vercel frontend URL
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    exposedHeaders: ["Access-Control-Allow-Credentials"],
   }),
 );
 

@@ -114,11 +114,20 @@ exports.login = async (req, res) => {
     // COOKIE FIX
     // ======================================
 
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   secure: true,
+    //   sameSite: "none",
+    //   maxAge: 30 * 24 * 60 * 60 * 1000,
+    // });
+
     res.cookie("token", token, {
       httpOnly: true,
-      secure: true,
-      sameSite: "none",
-      maxAge: 30 * 24 * 60 * 60 * 1000,
+      secure: true, // must be true in production (HTTPS)
+      sameSite: "none", // required for cross-origin cookies
+      partitioned: true, // helps with modern Chrome privacy sandbox
+      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+      path: "/",
     });
 
     // Response
@@ -145,18 +154,28 @@ exports.login = async (req, res) => {
 // ======================================
 
 exports.logout = (req, res) => {
+  // res.cookie("token", "", {
+  //   httpOnly: true,
+  //   secure: true,
+  //   sameSite: "none",
+  //   expires: new Date(0),
+  // });
+
+  // Inside your logout controller
   res.cookie("token", "", {
     httpOnly: true,
     secure: true,
     sameSite: "none",
+    partitioned: true,
     expires: new Date(0),
+    path: "/",
   });
 
   res.status(200).json({
     success: true,
     message: "Logged out",
   });
-};
+};;
 
 // ======================================
 // GET ME
