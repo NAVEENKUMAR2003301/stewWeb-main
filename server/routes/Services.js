@@ -8,6 +8,11 @@ const {
   deleteService,
 } = require("../controllers/serviceController");
 
+// Placeholder—replace with actual controller logic if needed
+router.get('/', (req, res) => {
+  res.json({ success: true, data: [] });
+});
+
 // Public routes
 router.get("/", getServices);
 router.get("/:id", getService);
