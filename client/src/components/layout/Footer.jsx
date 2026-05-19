@@ -296,8 +296,8 @@ const Footer = () => {
 
                     {/* Brand column */}
                     <div>
-                        <Link to="/" className="ftr-brand-name ftr-gold" aria-label="EventPlanner – Go to home">
-                            EventPlanner
+                        <Link to="/" className="ftr-brand-name ftr-gold" aria-label="StephenDecoration – Go to home">
+                            StephenDecoration
                         </Link>
                         <p className="ftr-tagline">
                             We turn your dream events into reality. From intimate ceremonies to grand galas — crafted with precision and elegance.
@@ -328,15 +328,15 @@ const Footer = () => {
                         {/* Contact details */}
                         <a href={`https://wa.me/${whatsappNumber}`} className="ftr-contact-row" target="_blank" rel="noopener noreferrer" aria-label="Call or WhatsApp us">
                             <span className="ftr-contact-icon" aria-hidden="true"><FaPhone /></span>
-                            +91 98765 43210
+                            +91 9788747902
                         </a>
-                        <a href="mailto:info@yourdomain.com" className="ftr-contact-row" aria-label="Email us">
+                        <a href="mailto:stephensdecorators@gmail.com" className="ftr-contact-row" aria-label="Email us">
                             <span className="ftr-contact-icon" aria-hidden="true"><FaEnvelope /></span>
-                            info@yourdomain.com
+                            stephensdecorators@gmail.com
                         </a>
                         <div className="ftr-contact-row" aria-label="Our location">
                             <span className="ftr-contact-icon" aria-hidden="true"><FaMapMarkerAlt /></span>
-                            Mumbai, Maharashtra, India
+                            Vilathikulam, Tamil Nadu 628907 , India
                         </div>
                     </div>
 
@@ -413,7 +413,7 @@ const Footer = () => {
                 <div className="ftr-bottom">
                     <div className="ftr-bottom-inner">
                         <p className="ftr-copy">
-                            &copy; {currentYear} EventPlanner. All rights reserved. Crafted with ✦ for your special moments.
+                            &copy; {currentYear} StephenDecoration. All rights reserved. Crafted with ✦ for your special moments.
                         </p>
                         <nav className="ftr-bottom-links" aria-label="Footer legal links">
                             <a href="#" className="ftr-bottom-link">Privacy Policy</a>

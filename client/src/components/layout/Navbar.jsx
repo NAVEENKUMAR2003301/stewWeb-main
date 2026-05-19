@@ -236,9 +236,9 @@ const Navbar = () => {
 
                 <div className="nb-inner">
                     {/* Brand */}
-                    <Link to="/" className="nb-brand" aria-label="EventPlanner – Go to homepage">
+                    <Link to="/" className="nb-brand" aria-label="StephenDecoration – Go to homepage">
                         <span className="nb-brand-tag">✦ Event Management</span>
-                        <span className="nb-brand-name">EventPlanner</span>
+                        <span className="nb-brand-name">StephenDecoration</span>
                     </Link>
 
                     {/* Desktop nav */}

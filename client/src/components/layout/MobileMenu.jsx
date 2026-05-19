@@ -271,9 +271,9 @@ const MobileMenu = ({ isOpen, onClose }) => {
             >
                 {/* Header */}
                 <div className="mm-header">
-                    <Link to="/" className="mm-brand" aria-label="EventPlanner – Go to home">
+                    <Link to="/" className="mm-brand" aria-label="StephenDecoration – Go to home">
                         <span className="mm-brand-tag">✦ Event Management</span>
-                        <span className="mm-brand-name">EventPlanner</span>
+                        <span className="mm-brand-name">StephenDecoration</span>
                     </Link>
                     <button
                         className="mm-close"
