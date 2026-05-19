@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { protect } = require("../middlewares/auth");
-const { uploadSingle, uploadMultiple } = require("../middlewares/upload");
+const { protect } = require("../middlewares/auth.js");
+const { uploadSingle, uploadMultiple } = require("../middlewares/upload.js");
 
 // Single image
 router.post("/single", protect, uploadSingle, (req, res) => {

@@ -1,5 +1,5 @@
-const Event = require("../models/Event");
-const Enquiry = require("../models/Enquiry");
+const Event = require("../models/Event.js");
+const Enquiry = require("../models/Enquiry.js");
 
 exports.getDashboard = async (req, res) => {
   try {

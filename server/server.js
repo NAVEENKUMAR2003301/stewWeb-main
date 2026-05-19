@@ -222,7 +222,7 @@ const app = express();
 // CRON FILE
 // ======================================
 
-require("./cron/monthlyReportCronAutomation");
+require("./cron/monthlyReportCronAutomation.js");
 
 // ======================================
 // SECURITY
@@ -263,21 +263,25 @@ if (process.env.NODE_ENV !== "production") {
 // ROUTES
 // ======================================
 
-app.use("/api/auth", require("./routes/auth"));
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "API Running...!" });
+});
 
-app.use("/api/events", require("./routes/events"));
+app.use("/api/auth", require("./routes/auth.js"));
 
-app.use("/api/enquiries", require("./routes/enquiries"));
+app.use("/api/events", require("./routes/events.js"));
 
-app.use("/api/upload", require("./routes/upload"));
+app.use("/api/enquiries", require("./routes/enquiries.js"));
 
-app.use("/api/admin", require("./routes/admin"));
+app.use("/api/upload", require("./routes/upload.js"));
 
-app.use("/api/contact", require("./routes/Contact"));
+app.use("/api/admin", require("./routes/admin.js"));
 
-app.use("/api/services", require("./routes/services"));
+app.use("/api/contact", require("./routes/Contact.js"));
 
-app.use("/api/report", require("./routes/reportRoutes"));
+app.use("/api/services", require("./routes/services.js"));
+
+app.use("/api/report", require("./routes/reportRoutes.js"));
 
 // ======================================
 // 404 ROUTE
@@ -294,7 +298,7 @@ app.use((req, res) => {
 // ERROR HANDLER
 // ======================================
 
-app.use(require("./middlewares/errorHandler"));
+app.use(require("./middlewares/errorHandler.js"));
 
 // ======================================
 // DATABASE
@@ -322,7 +326,7 @@ mongoose
     // Every 1st day of month at 12:00 AM
     // ======================================
 
-    const { sendMonthlyReport } = require("./controllers/reportController");
+    const { sendMonthlyReport } = require("./controllers/reportController.js");
 
     cron.schedule("0 0 1 * *", async () => {
       console.log("📧 Running monthly report cron...");

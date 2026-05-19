@@ -1,5 +1,5 @@
 const exp = require("express")
-const { contactFormSubmission } = require("../controllers/ContactController")
+const { contactFormSubmission } = require("../controllers/ContactController.js")
 
 const router=exp.Router()
 

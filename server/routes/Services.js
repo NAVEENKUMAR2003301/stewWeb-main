@@ -25,14 +25,14 @@
 // module.exports = router;
 
 const router = require("express").Router();
-const { protect } = require("../middlewares/auth");
+const { protect } = require("../middlewares/auth.js");
 const {
   getServices,
   getService,
   createService,
   updateService,
   deleteService,
-} = require("../controllers/serviceController");
+} = require("../controllers/serviceController.js");
 
 // Public routes
 router.get("/", getServices);

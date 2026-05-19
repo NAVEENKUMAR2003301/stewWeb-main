@@ -435,9 +435,9 @@
 //   }
 // };
 
-const Enquiry = require("../models/Enquiry");
-const Event = require("../models/Event");
-const sendEmail = require("../utils/sendEmail");
+const Enquiry = require("../models/Enquiry.js");
+const Event = require("../models/Event.js");
+const sendEmail = require("../utils/sendEmail.js");
 
 exports.sendMonthlyReport = async (req, res) => {
   try {

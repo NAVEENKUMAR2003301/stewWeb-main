@@ -31,7 +31,7 @@
 // cron/monthlyReportCron.js
 
 const cron = require("node-cron");
-const { sendMonthlyReport } = require("../controllers/reportController");
+const { sendMonthlyReport } = require("../controllers/reportController.js");
 
 // Runs at 12:00 AM on the 1st day of every month
 cron.schedule("0 0 1 * *", async () => {

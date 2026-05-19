@@ -1,13 +1,13 @@
 const router = require("express").Router();
-const Event = require("../models/Event"); // ← MUST be imported
+const Event = require("../models/Event.js"); // ← MUST be imported
 const {
   createEvent,
   getAllEvents,
   getPastEvents,
   updateEvent,
   deleteEvent,
-} = require("../controllers/eventController");
-const { protect } = require("../middlewares/auth");
+} = require("../controllers/eventController.js");
+const { protect } = require("../middlewares/auth.js");
 
 // ---------- PUBLIC ROUTES ----------
 

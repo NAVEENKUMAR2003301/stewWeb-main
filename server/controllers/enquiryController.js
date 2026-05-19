@@ -394,8 +394,8 @@
 // };
 
 
-const Enquiry = require("../models/Enquiry");
-const sendEmail = require("../utils/sendEmail");
+const Enquiry = require("../models/Enquiry.js");
+const sendEmail = require("../utils/sendEmail.js");
 
 const email = process.env.ADMIN_EMAIL;
 

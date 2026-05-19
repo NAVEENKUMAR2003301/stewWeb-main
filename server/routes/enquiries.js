@@ -3,8 +3,8 @@ const {
   submitEnquiry,
   getEnquiries,
   updateEnquiry,
-} = require("../controllers/enquiryController");
-const { protect } = require("../middlewares/auth");
+} = require("../controllers/enquiryController.js");
+const { protect } = require("../middlewares/auth.js");
 
 router.post("/", submitEnquiry); // public
 router.get("/", protect, getEnquiries); // admin only
