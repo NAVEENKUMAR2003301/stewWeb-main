@@ -6,7 +6,6 @@ const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
 const cookieParser = require("cookie-parser");
 const cron = require("node-cron"); // ← for automatic monthly report
-
 const servicesRoutes = require("./routes/services");
 require("dotenv").config();
 
