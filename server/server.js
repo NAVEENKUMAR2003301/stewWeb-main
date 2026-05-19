@@ -100,7 +100,6 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const rateLimit = require("express-rate-limit");
-const serviceRate = require("./routes/services")
 const cookieParser = require("cookie-parser");
 const cron = require("node-cron");
 require("dotenv").config();
@@ -145,7 +144,7 @@ app.use("/api/admin", require("./routes/admin"));
 app.use("/api/contact", require("./routes/Contact"));
 
 // IMPORTANT
-app.use("/api/services", serviceRate);
+app.use("/api/services", require("./routes/services"));
 
 // ---------- 404 ----------
 app.use((req, res) => {
